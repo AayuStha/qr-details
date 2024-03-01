@@ -1,12 +1,12 @@
 const express = require('express');
 const qr = require('qrcode');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
 
-app.get('/', (req, res) => {
+app.get('/generate', (req, res) => {
     const websiteData = req.query.website || 'https://www.aayushrestha.com';
     const githubData = req.query.github || 'https://www.github.com/AayuStha';
     const fbData = req.query.facebook || 'https://www.facebook.com/MaJhAa0';
@@ -60,7 +60,6 @@ app.get('/', (req, res) => {
     });
 });
 
-
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
