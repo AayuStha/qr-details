@@ -1,0 +1,18 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+
+# Generated EJS template files
+*.ejs.js
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
