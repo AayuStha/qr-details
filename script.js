@@ -6,7 +6,7 @@ const port = 3000;
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
 
-app.get('/generate', (req, res) => {
+app.get('/', (req, res) => {
     const websiteData = req.query.website || 'https://www.aayushrestha.com';
     const githubData = req.query.github || 'https://www.github.com/AayuStha';
     const fbData = req.query.facebook || 'https://www.facebook.com/MaJhAa0';
